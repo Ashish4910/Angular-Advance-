@@ -21,3 +21,52 @@ Inline Element ==> occupy necessary space only
 lecture 9 ==>
 
 
+
+lecture  11 ==>
+
+#Different between Get and post 
+
+post => will submit the data by appending the body , post method consist the both header and body  i.e link dont contain the deatil of form 
+
+get ==> will submit the data by appending the header i.e i will get the data in the link 
+
+
+lecture 11 End ===>
+
+lecture 12  ==>
+
+
+we have learned about the form 
+
+==> in form we use onblur ==> that make input field more dynamic for the user 
+==> onblur is used when user came to input field but not field the data to that input field we apply the the method 
+
+lecture 12 end ==>
+
+
+lecture 13 ==>
+
+NodeJs ==> javascript Runtime Environment and also Backend FrameWork 
+node 17 onward angular is accessable 
+
+NPM ==> Node Package manager ==> Automate the build process ==> Collecting liberies , configuratuin 
+
+
+==> Nodejs vs NPM 
+
+nodejs is a runtime Environment
+npm is build process
+
+===>build process
+
+FolderStructure
+Collecting The liberies
+Compilation or Interpretation process
+Configuration
+
++++++++++++++
+
+package.json ==> 
+
+lecture stoped at ==> 31.01 min ==> 33.43 min is remaining 
+lecture 13 end ==>
