@@ -1,0 +1,23 @@
+angular 13 & 14 is lst verion so most of is used by more people 
+
+==> 
+<html> ==> this    tag is called  root 
+DOM ==> Document object model (this is going to document your html tag for more futuristic manner)
+(what is input DOM ==> input element ==> input tag )
+
+
+xml => its  does'nt have any pre-defined tag 
+html ==> all tag is pre-defined
+
+html ==> tag ==> element (Chrome is 
+
+Block line element && Inline element ===>
+
+Block line element ==> occupy entire horizontal space 
+
+Inline Element ==> occupy necessary space only 
+
+
+lecture 9 ==>
+
+

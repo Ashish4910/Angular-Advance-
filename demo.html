@@ -1,0 +1,26 @@
+<input type="button" onclick="demo()" value="Click"></input>
+
+<input type="button" onmouseover="demo()" value="mouseOver"></input>
+
+<input type="button" onmouseout="demo()" value="mouseout"></input>
+
+<input type="text" id="user">
+<input type="button" value="Get Value" onclick="getValueByName()"> </input>
+
+<script>
+    function getValue() {
+        var a = document.getElementById('user').value;
+        document.write(a);
+
+    }
+
+    function getValueByName(){
+        alert(document.getElementsByTagName('input')[1].value)
+    }
+
+
+
+    function demo() {
+        document.write('Hello demo is called');
+    }
+</script>
