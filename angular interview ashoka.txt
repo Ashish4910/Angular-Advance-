@@ -49,7 +49,7 @@ lecture 13 ==>
 NodeJs ==> javascript Runtime Environment and also Backend FrameWork 
 node 17 onward angular is accessable 
 
-NPM ==> Node Package manager ==> Automate the build process ==> Collecting liberies , configuratuin 
+NPM ==> Node Package manager ==> Automate the build process(build tools) ==> Collecting liberies , configuratuin 
 
 
 ==> Nodejs vs NPM 
@@ -68,5 +68,86 @@ Configuration
 
 package.json ==> 
 
-lecture stoped at ==> 31.01 min ==> 33.43 min is remaining 
+
+
+
+package.json ==>
+devDependencies is for local machine 
+dependencies is use for server 
+
+npm init ==> create the package  json
+
+======
+snipe@DESKTOP-4FNGGB3 MINGW64 /c/Angular Ashoka (master)
+$ npm run test
+
+==========
+
+snipe@DESKTOP-4FNGGB3 MINGW64 /c/Angular Ashoka (master)
+$ npm install d3 --save
+==> THIS will download and save in the package.json
+
+==========
+npm install -g typescript
+==> install the typescript globally
+
+===========
+
+npm install -g tsc
+
+==> install tsc for typescript compiler
+
+All Command recap ==>
+1. Nodejs
+2.NPM
+3.npm install -g typescript
+4. npm install -g tsc 
+
 lecture 13 end ==>
+
+lecture 14 start =====>
+
+Disadvantage of javascript ?
+
+1. javascript is not have type safty
+2. javascript is not having scope safty
+
+ ==> JS + typesafty ===> Typescript
+
+==> typescript is super script of javascript
+==> ts is objected oriented technique
+
+1. Once object is create with int and in later you cannot store string value i.e typesafty
+
+==> rollnumber : number;
+==> userName : string;
+==> isActive : boolean;
+==> roll : 2;
+
+     structure oriented                     vs                      object oriented 
+
+==>  C , javascript , C squal                                         java , c++ , C# , Python ,typescript                                                   
+==>  code written in structre format                                   not support all oops format                                                        
+==>  no concept of reuse of code                                      only support encapsulation , inheritance , abstraction and some polymorphism                                                    
+==>  Debugging is very Diffcult                                                                                            
+==>  it only focus only on function                                                                                             
+==>                                                                                              
+==>                                                                                              
+
+ encapsulation ==>
+ 1. process of binding method and variable in single entity  ==>(Entity is called class)
+ 2. 
+
+
+reference variable store object 
+
+this . ==> Used to is called the current class object or to use  the global variable we use (this.)
+
+
+
+
+
+
+
+lecture 14 end ======>
+
