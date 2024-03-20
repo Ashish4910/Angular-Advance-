@@ -126,8 +126,8 @@ Disadvantage of javascript ?
 
      structure oriented                     vs                      object oriented 
 
-==>  C , javascript , C squal                                         java , c++ , C# , Python ,typescript                                                   
-==>  code written in structre format                                   not support all oops format                                                        
+==>  C , javascript , C squal                                         java , c++ , C# , Python                                                  
+==>  code written in structre format                                 typescript   not support all oops format                                                        
 ==>  no concept of reuse of code                                      only support encapsulation , inheritance , abstraction and some polymorphism                                                    
 ==>  Debugging is very Diffcult                                                                                            
 ==>  it only focus only on function                                                                                             
