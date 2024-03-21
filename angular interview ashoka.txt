@@ -151,3 +151,32 @@ this . ==> Used to is called the current class object or to use  the global vari
 
 lecture 14 end ======>
 
+lecture 15==>
+
+class==>
+1. if you want to 
+
+
+Public ==>                             protected ==>                                     private ==>
+1. Default Visibility                  1. inside the class                                1. Only inside the  class  
+2. Inside the class                    2. inside sub-class                                2. not in the subclass
+3. Outside class                       3. ont out side the class                          3. not outside class
+4. In Sub-Class
+
+
+
+
+
+
+Lecture 15 end ==>
+
+
+lecture 16 ==>
+
+constructor =>
+1. constructor is created at the time object is created 
+2.constructor overloading is not possible 
+
+
+
+lecture 16 end ==>
