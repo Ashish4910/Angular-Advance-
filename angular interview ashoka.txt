@@ -163,7 +163,26 @@ Public ==>                             protected ==>                            
 3. Outside class                       3. ont out side the class                          3. not outside class
 4. In Sub-Class
 
+Inheritance ==>
 
+IS-A ==> Extend
+
+HAS-A ==> called parent class object in child class
+
+==> Create a parent and child class indiffernt file 
+
+import {Demo} from "./demo";
+
+==> class need to be exported before extends 
+
+member ==> variable and method 
+ ts ==> member visibality
+
+
+public ==> 
+1.parent  class
+2.outside class
+3.child class
 
 
 
