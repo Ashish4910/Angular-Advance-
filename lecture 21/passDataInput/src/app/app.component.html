@@ -1,0 +1,9 @@
+<h1>Passsing the Data from Parents to child class</h1>
+{{result}}
+Enter the data You want to passed to the Child Classs : <input type="text" #temp>
+<button  (click)="pushDisplay(temp)">Submit</button>
+
+<h2> Here App Component Ended and Demo Component is going to Start from Below </h2>
+
+
+<app-democomponent [msg]="result"></app-democomponent>
