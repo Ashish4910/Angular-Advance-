@@ -1,8 +1,8 @@
-import {Demo} from "./demo";
+import { Demo } from "./demo";
 
 class other {
 
-    otherMethod(){
+    otherMethod() {
         console.log("other mothod");
         let d = new Demo();
         d.greet();

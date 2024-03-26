@@ -26,7 +26,7 @@ lecture  11 ==>
 
 #Different between Get and post 
 
-post => will submit the data by appending the body , post method consist the both header and body  i.e link dont contain the deatil of form 
+post => will submit the data by appending the body , post method consist the both header and body  i.e link dont contain the details of form 
 
 get ==> will submit the data by appending the header i.e i will get the data in the link 
 
@@ -190,6 +190,9 @@ public ==>
 Lecture 15 end ==>
 
 
+
+
+
 lecture 16 ==>
 
 constructor =>
@@ -199,3 +202,113 @@ constructor =>
 
 
 lecture 16 end ==>
+
+
+Lecture 19 ==>
+
+component ==> consist of view and logic 
+
+1. view ==> view can be used in the two ways
+           1. template  ==> only html code is written 
+           2. templateUrl ==> we refer the external html to the project 
+
+
+
+
+Lecture 19 end ==>
+
+
+lecture 20 ==>
+
+
+onClick()==> (Click);
+
+id="username" ==> #username
+
+1. if your input type 
+ a.username ==> text 
+ b password ==> password 
+
+==> and you are using the click event in the angular then you need pass the value from the button to the component class
+==> then function you have called has to be some parameter that parameter need to be be any then you can called the value using
+==> username.value and password.value then you can get that value in the method 
+
+
+
+
+lecture 20 end ==>
+
+
+lecture 21==>
+
+In this we learned about how to pass the data from parent class to the child class 
+
+==> like one componet to another 
+==> through @input filed 
+
+
+
+Lecture 21 End ==>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
