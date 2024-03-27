@@ -163,7 +163,11 @@ Public ==>                             protected ==>                            
 3. Outside class                       3. ont out side the class                          3. not outside class
 4. In Sub-Class
 
-Inheritance ==>
+Inheritance 
+
+
+
+==>
 
 IS-A ==> Extend
 
@@ -471,6 +475,76 @@ in this we learned about the Pipe
 
 Lecture 24 End ==>
 
+
+Lecture 25 ==>
+
+
+@pipe(name:'' , pure:true) ==> pure pipe ==> if value change which a pure change 
+
+@pipe(name:'', pure:false)==> Impure pipe => anything change 
+
+ng g pipe evenodd ==>command to create a pipe class
+
+
+
+==> this is called the pure pipe 
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'evenodd'
+})
+export class EvenoddPipe implements PipeTransform {
+ 
+  // console.log("------------------Even odd pipe is executed--------------");
+ 
+
+  transform(value: any) {
+
+    if (value % 2 == 0) {
+      return value + ' is even Number ';
+    }
+
+    return value + '  is odd Number ';
+  }
+
+}
+
+==>===============================
+
+==> Impure pipe ==> in impure logic we used to declared the==> pure : false
+==>deafault is pure pipe 
+
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'evenodd'
+  pure:false
+})
+export class EvenoddPipe implements PipeTransform {
+ 
+  // console.log("------------------Even odd pipe is executed--------------");
+ 
+
+  transform(value: any) {
+
+    if (value % 2 == 0) {
+      return value + ' is even Number ';
+    }
+
+    return value + '  is odd Number ';
+  }
+
+}
+
+
+
+
+==> in lecture 25 we learned how  to create the customized pipe and in pipe we have 2 type pure and impure that implementation is showned in the 
+==> in the lecture 
+
+Lecture 25 end ==>
 
 
 

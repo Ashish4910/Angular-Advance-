@@ -1,0 +1,7 @@
+<h1>App Component</h1>
+
+<h1>{{ price  | currency:'INR'}}</h1>
+
+<input type="text" #number>
+<button (click)="setPrice(number.value)">click</button>
+<h1 *ngIf="price >0">{{ price  | evenodd}}</h1> 
