@@ -1,0 +1,17 @@
+<h1 appDemo>App Component </h1>
+
+<input type="text" #ageInput >
+<input type="button" (click)="isEligble(ageInput.value)" value="Submit">
+
+<div *ngIf="age>18"> Hello There !!! you are eligable </div>
+
+<p appDemo>Array Data is Displayed </p>
+
+<ul *ngFor="let temp of total" >
+
+  <li>{{temp}}</li>
+
+</ul>
+
+
+<h1 appDemo>Here my Lecture 23 ended </h1>

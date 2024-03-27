@@ -251,6 +251,151 @@ In this we learned about how to pass the data from parent class to the child cla
 Lecture 21 End ==>
 
 
+Lecture 22 == making @output annotation passing value to the parents from child>
+
+
+==> Step 1 : ==> for send data from child class to parent class  we need to first make a object with @Output annotation
+=-=> Step 2: ==> that object need to (new EventEmitter()); that make the object to be emited to the parent component 
+
+export class DemoComponentComponent {
+
+@Input()
+inputData:any;
+
+
+
+  @Output()
+  passOutput = new EventEmitter();
+
+
+
+  getData(val: any) {
+    this.passOutput.emit(val);
+  }
+
+
+==> step 3 : ==> in third step we need to get the value that i need to passed to the parent component 
+===> Step 4 : ==> here i have taken the id (#outputValue)  that is get called in the getData() function using keyup 
+==> Step 5 : ==> this value get called in the ts file that is illustrated in the above class 
+
+<h1>demo-component works!</h1>
+
+<input type="text" #outputValue (keyup)="getData(outputValue.value)">
+
+
+
+==> Step 6 : ==> now i have to passed the selector to the parents html page and in that i need to pass the object 
+===> Step 7 : ==> using ()==> using round bracket because as we declared the object as new EventEmmiter() this make the object as the event 
+==> Step 8 : ==> Event is called in the () => round bracket here i have passed the object and in the method i have called the parent class function 
+==> Step 9 : ==> parent class function ==> getOutputData($event) ==> $event is generic method that catch all the object that are comming from this method
+
+
+<h1>Getting the output Data</h1>
+
+{{op}}
+
+
+<app-demo-component (passOutput)="getOutputData($event)"></app-demo-component>
+
+
+
+==> Step 10 : ==> this is how i have displayed the object of the (op) in the parent componet html that i have displayed in the above steps 
+
+  op: any;
+
+
+  getOutputData(val: any) {
+    this.op = val;
+  }
+Lecture 22 End ==>
+
+
+Lecture 23 ==>
+
+==> in this chapter we have learned about the *ngIf and *ngFor and how to created a custom directive 
+==> to created a custom directive first you need to first create the directive class
+==> type thi command to create the directive ==> ng g d demo
+
+
+
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'directive';
+
+
+  age: number = 0;
+
+  total =['Ashish', 'Manish','Komal','Rajkumari','Sheshmani'];
+
+  isEligble(val:any){
+
+    this.age = val;
+  }
+
+}
+
+===> here we first created the variable age which get the get from the input field
+==> we have created the array of name total ==> 
+
+
+
+==> App.component.html ==> page 
+
+<h1 appDemo>App Component </h1>
+
+<input type="text" #ageInput >
+<input type="button" (click)="isEligble(ageInput.value)" value="Submit">
+
+<div *ngIf="age>18"> Hello There !!! you are eligable </div>
+
+<p appDemo>Array Data is Displayed </p>
+
+<ul *ngFor="let temp of total" >
+
+  <li>{{temp}}</li>
+
+</ul>
+
+
+==> here i have used the *ngIf statement 
+==> and *ngFor is also been used for iteraton 
+==> and if you carfully observe the paragraph and h1 tag you will see (appDemo) ==> that is directives that i have created in the below code 
+
+
+
+===> import { Directive, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appDemo]'
+})
+export class DemoDirective {
+
+  constructor(private el: ElementRef) {
+
+
+
+    console.log("Directive is called ");
+
+    el.nativeElement.style = "background-color:teal; color:white";
+  }
+
+}
+
+===> in top you can see selector that can be used as the name in the varible like id you provide and a provide add on functionalty for user 
+==> later in the constructor we have declared the ElementRef ==> that created the object that object id futher is used for the object reference and 
+==> for change the nativeElement.style for the purpose that you need 
+
+
+Lecture 23 end ==>
+
 
 
 
