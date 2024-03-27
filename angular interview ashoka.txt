@@ -204,7 +204,67 @@ constructor =>
 lecture 16 end ==>
 
 
-Lecture 19 ==>
+Lecture 17 ==  firstapp project > 
+
+CLI ==> Used by cmd 
+GUI ==> UI Tools 
+
+npm install ==> npm install -g @angular/cli ==> For global 
+
+firstapp ==> project 
+1. test ==> ng v  ==> for check that angualr is present  or  install by above command
+2. create new project ==> ng new firstapp
+3. to run the project ==> ng serve
+
+DirectoryStructure 
+
+1. package.json ==> Necessary dependencies and some change in project , adding some library we go with package.json (Package related confuguration)
+2. tsconfig.json ==> angualr version  and configuration and apply some change on typescript we go with tsconfig.json(change regarding typescript)
+3. angular.json ==> apply some change  in angular FrameWork like add bootstrap (changes regarding angular framework)
+
+src ==> 
+1.App folder ----
+               1. app.component.ts
+               2. app.services
+               3. app.modules
+
+2. Assest Folder-----==> External files
+
+3. index.html ==> home page 
+
+
+
+Lecture 17  end ==>
+
+
+
+Lecture 18 ==  crated the angular project>
+
+1. Created project ==> angulardemo
+
+
+angular is called component based design ==> develop big view in small small part  
+
+
+multipage ==> reload the  all the resource 
+singlepage ==> reload page resource for 1 time only 
+
+component ==> View + Login 
+1.view ==> is selector and template and module
+
+Lecture 18 End ==>
+
+
+lecture 19 ==>
+
+
+CLI Command ==>
+1. ng generate component homecomponent ==> ng g c home
+2. ng generate service demo  ==> ng g s
+3. ng generate pipe => ng g p
+4. ng generate module ==> ng g m 
+
+
 
 component ==> consist of view and logic 
 
