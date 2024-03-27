@@ -312,6 +312,10 @@ Lecture 22 End ==>
 
 Lecture 23 ==>
 
+
+note => Directive anhence the functionlity of the html elements
+
+
 ==> in this chapter we have learned about the *ngIf and *ngFor and how to created a custom directive 
 ==> to created a custom directive first you need to first create the directive class
 ==> type thi command to create the directive ==> ng g d demo
@@ -396,7 +400,16 @@ export class DemoDirective {
 
 Lecture 23 end ==>
 
+Lecture 24 ==>
 
+
+in this we learned about the Pipe 
+==> Pipe dont not change the element it change the variable of the outcome
+==> where as directive change the method of the element 
+
+<p> {{price | uppercase}}
+
+Lecture 24 End ==>
 
 
 
