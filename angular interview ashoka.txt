@@ -217,7 +217,7 @@ npm install ==> npm install -g @angular/cli ==> For global
 
 firstapp ==> project 
 1. test ==> ng v  ==> for check that angualr is present  or  install by above command
-2. create new project ==> ng new firstapp
+2. create new project ==> ng new firstapp  or ng new --on-standalone firstapp  ==> for above angular 17 we need to use standalone for creation of the module 
 3. to run the project ==> ng serve
 
 DirectoryStructure 
