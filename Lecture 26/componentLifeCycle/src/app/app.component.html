@@ -1,0 +1,10 @@
+<h1> App Component</h1>
+{{show}}
+
+<input type="text" #message>
+<input type="button"  (click)="setMessage(message.value)" value="submit">
+
+<app-democomponent *ngIf="show" [msg]="setInputMsg"> </app-democomponent>
+
+
+<button (click)="display()">Show / Hide Child</button>

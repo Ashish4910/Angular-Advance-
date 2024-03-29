@@ -546,9 +546,167 @@ export class EvenoddPipe implements PipeTransform {
 
 Lecture 25 end ==>
 
+Lecture 26 ==>
+
+Component LifeCycle ==> 8 Stage 
+
+1. ngOnInit==> Initilized at the time of component creation 
+
+2. ngOnDestroy ==> removing component in the DOM
+ A. onDestroy -> Implementation 
+ B. when you remove the component from use the onDestroy is called
+ C. example : => child class is remove from the use from parent class
+
+3. ngOnChange 
+ A. OnChange -> implementation
+ B. 
+
+4. ngDoCheck 
+A. DoCheck -> Implementation 
+B. Its will get Executed when any lifecycle is executed i.e it will provide details about the other component lifecycle
+
+5. ngAfterContentInit()
+6. ngAfterContentChecked()
+7.ngAfterViewInit()
+8.ngAfterViewChecked()
 
 
 
+note: We have learned about component lifecycle in ts we have 8 component lifecycle that is used for that use cases 
+1. ngOnInit : we used when we want to execute certain set of information after constructor this will execute component scanning 
+2. ngOnDestroy : This get Executed when we you  remove component  but in our project we have remove the component using directive i.e *ngIf="show"
+3. ngOnChange : This get Executed when we change the @input value here we have SimpleChanges which give the change that is denoted to the input field 
+
+ ngOnChanges(simple: SimpleChanges) {
+
+    console.log(simple)
+  }
+
+4. ngDoCheck ; 
+
+Lecture 26 End==>
+
+
+lecture 27 =>
+
+
+why we use services ?
+=> we use service beacuse we want to seperate the bussiness logic with reuse able content 
+=> using the serice we can use our method or some content when ever is required.
+
+
+There are 3 type to use service 
+1. component level ==> in component level we define the service in the component using => provider:[Service_name] , in component level we need to define in every componet when we use the service 
+2. Module level ==> in the component level we define the service in the provider above the bootstarp  , in the module level we need to define the service that we have created and can we used in every componet 
+3. Global level ==> in the globale level we define the serve when we initiate the service 
+     using providerIn:'root' in global level if we initialize the service we can use it with only calling he
+      object of the service 
+
+Note : Global level service is preferable 
+
+
+
+
+
+==> 1. Componet Level 
+
+import { Component, OnInit } from '@angular/core';
+import { GreetService } from '../greet.service';
+
+@Component({
+  selector: 'app-democomponent',
+  templateUrl: './democomponent.component.html',
+  styleUrls: ['./democomponent.component.css'],
+  providers: [GreetService]
+})
+export class DemocomponentComponent {
+
+  msg: any;
+
+
+  constructor(private greet: GreetService) {
+
+  }
+
+  greetmsg() {
+    this.msg = this.greet.display();
+  }
+
+}
+
+
+
+===> 2 . Module level 
+
+
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { DemocomponentComponent } from './democomponent/democomponent.component';
+import { GreetService } from './greet.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    DemocomponentComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [GreetService],
+  bootstrap: [AppComponent, DemocomponentComponent]
+})
+export class AppModule { }
+
+
+=====
+import { Component, OnInit } from '@angular/core';
+import { GreetService } from '../greet.service';
+
+@Component({
+  selector: 'app-democomponent',
+  templateUrl: './democomponent.component.html',
+  styleUrls: ['./democomponent.component.css'],
+  
+})
+export class DemocomponentComponent {
+
+  msg: any;
+
+
+  constructor(private greet: GreetService) {
+
+  }
+
+  greetmsg() {
+    this.msg = this.greet.display();
+  }
+
+}
+
+
+
+
+
+===> 3. Global level Service
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn:'root'
+})
+export class GreetService {
+
+  display() {
+    return "Hello I'm Service";
+  }
+}
+
+
+
+Lecture 27 end ==>
 
 
 
