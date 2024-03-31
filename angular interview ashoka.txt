@@ -850,9 +850,194 @@ two type of Form in angular
 
  ngModel ==> one way data binding 
 
+note : if we use [(ngModule)] it make two way binding  and if you remove that i will become one way binding 
+
+
+in this lecture we learned about the how to pass the value from form to the ts file using the ngModule and promise 
 
 Lecture 30 end ==>
 
+Lecture 31 ==>
+
+form ==> #myform ngForm
+
+
+==> 6 classes are present in the form
+
+1.ng-untouched  ==> if your input field is not touched by the form i.e if you click the inpuyt field and not done aur done doesnt matter it change to ng-touch
+2. ng-touched
+3. ng-pristine  ==> value is not  change 
+4. ng-dirty ==> value change happen to form and pristine beecome dirty
+5. ng-valid  ==> element is not required / Element is required and holding non null value
+6. ng-invalid  ==> Elemenmt is required and holding null value 
+
+
+
+
+==> Notes :
+
+1. import FormModule in the module.ts
+2. make form in Html page where form look like this  we have made one id #myForm after that we implement the ngForm for form validation form FormModule 
+3. (submit) is the method that we have made for the form note ==> don't called id.value it will make undfined in the console
+4. ngModel is used to pass the properties to every input filed all 6 classes that we discuss above will apply in the input filed 
+5. it you want input is required make it as required 
+
+<h1>App Component</h1>
+
+
+<form #myForm="ngForm" (submit)="getDetails(myForm)">
+
+  UserName : <input type="text" name="UserName" ngModel required><br>
+  password : <input type="text" name="pwd" ngModel required><br>
+  email : <input type="text" name="email" ngModel required><br>
+  contact : <input type="text" name="cont" ngModel required><br>
+  <input type="submit" value="Submit">
+
+
+</form>
+
+
+
+
+6. in the componet.ts we made method getDetails()
+7. .value ==> hold the value of the form
+8. .status ==> hold the status of the form i.e valid or inValid
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'reactiveform';
+
+  getDetails(deatils: any) {
+    console.log(deatils); // this will show all the value in console
+    console.log(deatils.value);  // this tell that form value 
+    console.log(deatils.status); // this will tell that form submited is value or not 
+
+  }
+
+}
+
+9. some style we made using some 6 class
+
+.ng-touched.ng-invalid{
+    border-color: red;
+}
+
+Lecture 31 End ==>
+
+
+
+Lecture 32 ==>
+
+
+Ractive Form ==>
+
+1. Reactive Form  ==> import in the app.module.ts  ==> (ReactiveFormsModule) import 
+2. Create controller in Component ts
+3. Create form in template and map those controller to Form 
+4. perform Validations at Component Levels
+
+
+
+step 1.  Reactive Form  ==> import in the app.module.ts  ==> (ReactiveFormsModule) import 
+
+ imports: [
+    BrowserModule,
+    AppRoutingModule,ReactiveFormsModule
+  ],
+
+
+  step 2 . Create controller in Component ts
+
+
+  import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'reactiveForm2';
+
+  myreactiveform: FormGroup;
+
+  constructor() {
+
+    this.myreactiveform = new FormGroup({});
+
+  }
+
+  ngOnInit() {
+
+    this.myreactiveform = new FormGroup({
+
+      'usr': new FormControl(null, Validators.required),
+      'pwd': new FormControl(null),
+      'cont': new FormControl(null)
+      // 'usr':new FormControl(null, Validators.required)
+    });
+  }
+
+  submitData() {
+
+
+    console.log(this.myreactiveform);
+  }
+
+ 
+}
+
+
+note :in step 2 we need to create the object of the FormGroup
+ that formgroup Object we need to bind to the reactive Form 
+
+ and after that we need to create the formCntroller to called the name of the input field and in the FormControl 
+ you can validate the form using null , required etc
+
+
+step 3 :Create form in template and map those controller to Form 
+->in this we need to called the FormGroup in that we need to call the object of the formGroup that we have create in the DemoComponentComponent
+->we are using submit becaus we want to see that what data we are getting when we sumit the Form
+-> in the input field we have declared the (formControlName) that is the property name  and the value that we are passing is
+-> is the same value we have created inthe componet using the FormControl.
+
+==================
+<h1>App Component</h1>
+
+
+
+<form [formGroup]="myreactiveform" (submit)="submitData()">
+
+  UserName : <input type="text" formControlName="usr"><br>
+  Password : <input type="text" formControlName="pwd"><br>
+  contact : <input type="text" formControlName="cont"><br>
+  <!-- Email : <input type="text" > -->
+  <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+
+Template  Driven Form                             Reactive Form
+
+1. Angular interface and form                   Programaticallty creating the Form
+object controlledby the angular 
+
+2. Completely relay on Directive                   Exceplicity access in ts Creating formController
+ngModel
+
+
+
+Lecture 32 End ==>
 
 
 
