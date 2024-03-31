@@ -709,6 +709,131 @@ export class GreetService {
 Lecture 27 end ==>
 
 
+Lecture 28 ==>
+
+Only project over view is dicuss
+
+Lecture 28 end ==>
+
+
+HttpClient 
+
+Promise : actually perform ascynonus manner i.e 
+
+pause at 36.09
+
+Lecture 29 ==>
+
+promise ==> 1. fullfilled
+            2. rejected 
+
+promise first execute if there is no ==> x.then operation this (then ) ensure  that first i will execute then promise will execute 
+
+
+observable ==> is updated version of the promise where we can stop in the middle in the promise we cannot stop if its started 
+
+observable ==> 1.subscribe
+               2. unsubscribe
+
+HttpClient is present in the HttpClientModule 
+step 1. Import the httpClientModule in the Import module.ts
+ 
+
+ step to get the API Call and displaying to the HTML page===>
+ 1. first called the HttpClientModule in the app.module.ts in the import 
+ 2. second is to create the service (ng g s serviceName) 
+ 3. In the service called the HttpClient which is the part of the HttpClientModule in the constructor 
+
+              import { HttpClient } from '@angular/common/http';
+               import { Injectable } from '@angular/core';
+
+                   @Injectable({
+                 providedIn: 'root'
+                    })
+                 export class UserServiceService {
+
+                  constructor(private http : HttpClient) { }
+
+                     displayUser(){
+                       return this.http.get('https://jsonplaceholder.typicode.com/users');
+                         }
+                          }
+
+4. and then make the method to called the api in that method using get , put , delete , etc 
+5. now in the component called that service method for that you need to called the service class in the constructor
+6. now the object that you have created to called the service use that object to called the method / function in the componet method on in the ngOnInit ()
+7. use subscribe() because it will return that all the object that are present the api 
+8.    this.userService.displayUser().subscribe(data => this.user = data); ==> this part much look wired understand it first we called the function of the service class
+  in that we use .subscribe for getting all the data and then we use data => this is arrow function for getting the data and then we assign theall the data to the user:any variable 
+  data and data need to be same 
+
+
+
+
+import { Component } from '@angular/core';
+import { UserServiceService } from './user-service.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'httpclient';
+
+  user: any;
+
+  constructor(private userService: UserServiceService) { }
+
+
+  ngOnInit(){
+    this.userService.displayUser().subscribe(data => this.user = data);
+
+  }
+  displayUser() {
+    this.userService.displayUser().subscribe(data => this.user = data);
+  }
+}
+
+
+9. for displaying the data is big issue  for that you can make the referece of the below html page 
+
+ 
+
+<h1>App Component </h1>
+
+<input type="button" (click)="displayUser()" value="GetURLValue">
+<!-- {{user}} -->
+
+<ul *ngFor="let user of user">
+
+
+  <li>{{user.id}} ,{{user.name}},{{user.email}}, {{user.address.city}}</li>
+</ul>
+
+<table>
+
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>City</th>
+
+  </tr>
+  <tr *ngFor="let user of user">
+
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.address.city}}</td>
+
+  </tr>
+
+
+
+</table>
+
+Lecture 29 end ==>
 
 
 
