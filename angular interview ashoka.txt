@@ -835,6 +835,23 @@ export class AppComponent {
 
 Lecture 29 end ==>
 
+lecture 30 ==>
+
+
+FormModule ==>
+
+two type of Form in angular 
+ 1. Template Driven Form ==> NgModule ==> here angular will create the form for getting the value of the form 
+ 2. Reactive Form - Programaticallty Creating Form ==> here we create the form 
+
+
+==> import (FormModule) in the app.module.ts in the import ==> 
+ [(ngModel)]==> two way data binding 
+
+ ngModel ==> one way data binding 
+
+
+Lecture 30 end ==>
 
 
 
