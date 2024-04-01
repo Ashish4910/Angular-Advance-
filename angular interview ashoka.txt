@@ -1073,6 +1073,9 @@ export class AppRoutingModule { }
 
 ==> this (AppRoutingModule) is need to be imported to the import in the app.module.ts
 
+==> to automatically reload the page you can use routerLink 
+==> for test case you case use the ==> ng test it will get all the details 
+==> spec.ts contain all the value of test case if you write some method in export that method you can test in the spec.ts class using if()
 
 
 ==> to test coverage
