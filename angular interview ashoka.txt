@@ -559,9 +559,9 @@ Component LifeCycle ==> 8 Stage
 
 3. ngOnChange 
  A. OnChange -> implementation
- B. 
+ B. it get called when there is change in the @input variable
 
-4. ngDoCheck 
+4. ngDoCheck   ==> this information about the any change 
 A. DoCheck -> Implementation 
 B. Its will get Executed when any lifecycle is executed i.e it will provide details about the other component lifecycle
 
@@ -1073,6 +1073,10 @@ export class AppRoutingModule { }
 
 ==> this (AppRoutingModule) is need to be imported to the import in the app.module.ts
 
+
+
+==> to test coverage
+--> ng test --no-watch--code-coverage
 Lecture 33 End ==>
 
 

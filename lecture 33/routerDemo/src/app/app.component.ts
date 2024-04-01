@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements DoCheck {
   title = 'routerDemo';
 
 
@@ -23,9 +23,12 @@ export class AppComponent {
     }
   }
 
+  ngDoCheck() {
+    this.login = localStorage.getItem('isloggedIn');
+  }
 
   logout() {
     this.login = localStorage.setItem('isloggedIn', 'false');
-    
+    window.location.reload();
   }
 }
