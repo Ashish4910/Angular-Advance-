@@ -1040,7 +1040,40 @@ ngModel
 Lecture 32 End ==>
 
 
+Lecture 33 ==>
 
+when you change for one component to another page resource should load one for that we use router 
+
+1. component inbox
+2. component sent
+
+
+for binding the router to moduleyou need to import to the app.module.ts
+=================
+imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+
+  ==============
+
+
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+==> this (AppRoutingModule) is need to be imported to the import in the app.module.ts
+
+Lecture 33 End ==>
 
 
 

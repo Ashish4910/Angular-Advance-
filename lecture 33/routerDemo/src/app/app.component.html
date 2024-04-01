@@ -1,0 +1,19 @@
+<header *ngIf="login=='true'">
+  <h1> App Component</h1>
+  <nav>
+
+
+    <!-- // this will reload whole page in the content its really not recommand to use href you can go with routerLink
+<a href="sent">Sent</a>
+<a href="inbox">Inbox</a> -->
+
+
+
+    <a routerLink="sent">Sent</a>
+    <a routerLink="inbox">Inbox</a>
+    <span><button (click)="logout()">Logout</button></span>
+  </nav>
+
+</header>
+
+<router-outlet></router-outlet>

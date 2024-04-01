@@ -1,0 +1,12 @@
+<h1>Please Login</h1>
+
+<div class="loginForm">
+  <form #myform="ngForm" (submit)="credential(myform)">
+
+    UserName : <input type="text" name="usr" required ngModel><br>
+
+    Password : <input type="text" name="pwd" required ngModel><br>
+
+    <input type="submit" value="Login">
+  </form>
+</div>
